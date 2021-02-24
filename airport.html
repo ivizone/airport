@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aeroporto de guarulhos</title>
+    <style>
+        body{
+            background-color: rgb(181, 239, 247);
+            color: black;
+            font: normal 13pt arial;
+            
+        }
+        h1#aer{
+            background-color: rgb(255, 255, 86);
+            text-align: center;
+            border-radius: 10px;
+        }
+        p#ini{
+            text-align: left;
+            width: 375pt;
+        }
+    </style>
+</head>
+<body>
+    <h1 id="aer">Aeroporto de Guarulhos</h1>
+    <br>
+    <br>
+    <p id="ini">Olá, bem vindo à Guarulhos o lugar onde mais se tem felicidade!
+        <br>Para você ter uma melhor estadia na nossa cidade fale seu <strong>país de origem</strong> na caixa de text a baixo:
+    </p> <input type="text" name="n1" id="n1">
+    <input type="button" value="Confirmar" onclick="confirm()">
+    <div id="resp"></div>
+    <script>
+        function confirm(){
+            var pais = document.getElementById('n1')
+            var resp = document.getElementById('resp')
+            if(pais === 'Brasil' || pais === 'brasil'){
+                resp.innerText = 'Siga a sua viagem feliz'
+            }else{
+                resp.innerText = `Você veio de ${pais} se você desejar ganhar um guia turisco brasileiro siga no portão ao lado `
+            }
+        }
+    
+    </script>
+</body>
+</html>
